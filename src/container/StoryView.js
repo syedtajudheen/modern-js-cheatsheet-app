@@ -14,10 +14,12 @@ export default class StoryView extends Component {
   render() {
     return (
       <ScrollView>
-        <HTML
-          html={this.props.navigation.state.params.item.body}
-          imagesMaxWidth={Dimensions.get("window").width}
-        />
+        <View style={{flex:1,padding:10, backgroundColor:'#fff'}}>
+          <HTML
+            html={this.props.navigation.state.params.item.body}
+            imagesMaxWidth={Dimensions.get("window").width}
+          />
+        </View>
       </ScrollView>
     );
   }

@@ -38,7 +38,7 @@ export default class HomeContent extends Component {
     return (
       <View style={styles.listHeaderView}>
         <Text style={styles.headerText}>
-          {this.props.listdata[0].deeperlink.title}
+          {this.props.listdata.deeperlink.title}
         </Text>
       </View>
     );
@@ -47,7 +47,7 @@ export default class HomeContent extends Component {
   render() {
     return (
       <FlatList
-        data={this.props.listdata[0].deeperlink.deeperlink}
+        data={this.props.listdata.deeperlink.deeperlink}
         renderItem={({ item, index }) => this.renderItem(item, index)}
         ListHeaderComponent={() => this.listHeader()}
         keyExtractor={(item, index) => item.title}
